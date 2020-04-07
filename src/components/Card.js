@@ -1,43 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-// Styles
-const container = {
-  display: 'flex',
-  justifyContent: 'center',
-  width: '60vw',
-  margin: 'auto'
-}
-
-const profile = {
-  width: '10vw',
-  height: '18vh'
-}
-
-const person = {
-  marginLeft: '2em'
-}
-
-const name = {
-  fontSize: '2em'
-}
-
-const company = {
-  fontSize: '1.5em'
-}
-
-// Card component
-class Card extends React.Component {
+export default class Card extends Component {
   render() {
     return (
-      <div style={container}>
-        <img style={profile} src="https://placehold.it/75" alt=''/>
-        <div style={person}>
-          <div style={name}>Name</div>
-          <div style={company}>Company name</div>
+      <div className='profileBox'>
+        <img className='avatar' src={this.props.avatar_url} alt=''/>
+        <div className='profileInfo'>
+          <div className='name'>{this.props.name}</div>
+          <div>{this.props.company}</div>
         </div>
       </div>
-    )
+    );
   }
 }
-
-export default Card
