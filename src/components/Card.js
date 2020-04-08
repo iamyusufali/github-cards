@@ -7,7 +7,7 @@ export default class Card extends Component {
         <img className='avatar' src={this.props.avatar_url} alt=''/>
         <div className='profileInfo'>
           <div className='name'>{this.props.name}</div>
-          <div>{this.props.company}</div>
+          <div className='company'>{this.props.company}</div>
         </div>
       </div>
     );

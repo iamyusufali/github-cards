@@ -5,7 +5,9 @@ export default class CardList extends Component {
   render() {
     const profiles = this.props.profileData;
     return (
-      profiles.map(profile => <Card {...profile}/>)
+      <div className='cardBox'>
+        {profiles.map(profile => <Card key={ profile.id } {...profile}/>)}
+      </div>
     );
   }
 }
