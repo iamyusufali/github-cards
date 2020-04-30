@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Card from '../components/Card';
 
 export default class CardList extends Component {
